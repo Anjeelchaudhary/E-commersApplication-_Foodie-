@@ -22,11 +22,12 @@ class _FoodPageNodyState extends State<FoodPageBody> {
 
   Widget _buildPageItem(int index) {
     return Container(
-      height: 220,
-      margin: EdgeInsets.only(left: 5, right: 5),
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30),
-          color: index.isEven ? Color(0xFF69c5df) : Color(0xFF9294cc)),
-    );
+        height: 220,
+        margin: EdgeInsets.only(left: 5, right: 5),
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(30),
+            color: index.isEven ? Color(0xFF69c5df) : Color(0xFF9294cc)),
+        image:
+            DecorationImage(image: AssetImage("assets/TharuFood/Sinki.png")));
   }
 }
