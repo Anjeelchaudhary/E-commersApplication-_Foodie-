@@ -51,29 +51,45 @@ class _FoodPageNodyState extends State<FoodPageBody> {
     //Here the transion of the upper slides is given
     Matrix4 matrix = new Matrix4.identity();
 
-    if (index == _currPageValue.floor()) {
+    if (index ==
+        _currPageValue.floor()) //here this line indicates the diplaying one
+    {
       var currScale = 1 - (_currPageValue - index) * (1 - _scaleFactor);
       var currTrans = _height * (1 - currScale) / 2;
       matrix = Matrix4.diagonal3Values(1, currScale, 1)
         ..setTranslationRaw(0, currTrans, 0);
-    } else if (index == _currPageValue.floor() + 1) {
+    }
+    //Logic
+    //this section id used for the next slide to make it smoother
+    //(index == _currPageValue.floor() + 1) here +1 means for the next slide
+    //if there id no slide left in left side or in right side then the page value is zero and if there atleast one then it's value is one
+
+    else if (index ==
+        _currPageValue.floor() + 1) //this line is for displaying for second one
+    {
       var currScale =
           _scaleFactor + (_currPageValue - index + 1) * (1 - _scaleFactor);
       var currTrans = _height * (1 - currScale) / 2;
       matrix = Matrix4.diagonal3Values(1, currScale, 1);
       matrix = Matrix4.diagonal3Values(1, currScale, 1)
         ..setTranslationRaw(0, currTrans, 0);
-    } else if (index == _currPageValue.floor() - 1) {
+    }
+    //
+
+    else if (index == _currPageValue.floor() - 1) //this show the previous one
+    {
       var currScale = 1 - (_currPageValue - index) * (1 - _scaleFactor);
+      var currTrans = _height * (1 - currScale) / 2;
       matrix = Matrix4.diagonal3Values(1, currScale, 1);
       matrix = Matrix4.diagonal3Values(1, currScale, 1)
-        ..setTranslationRaw(0, currScale, 0);
+        ..setTranslationRaw(0, currTrans, 0);
     } else {
       var currScale = 0.8;
       matrix = Matrix4.diagonal3Values(1, currScale, 1)
         ..setTranslationRaw(0, _height * (1 - _scaleFactor) / 2, 1);
     }
-
+    //In order to make transition effect effective Transform is uesd and it take
+    //it takes property here ie. matrix
     return Transform(
       transform: matrix,
       child: Stack(
@@ -97,7 +113,20 @@ class _FoodPageNodyState extends State<FoodPageBody> {
               height: 120,
               margin: const EdgeInsets.only(left: 30, right: 30, bottom: 30),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
+                borderRadius: BorderRadius.circular(20),
+
+                //here the bottom of the box ie. shadow is created
+                //boxdesign
+
+                boxShadow: const [
+                  BoxShadow(
+                      color: Color(0xFFe8e8e8),
+                      blurRadius: 5.0,
+                      offset: Offset(0,
+                          5)), //here if we use negative sighn it makes change in opposite side
+                  BoxShadow(color: Colors.white, offset: Offset(-5, 0)),
+                  BoxShadow(color: Colors.white, offset: Offset(5, 0)),
+                ],
                 color: Colors.white,
               ),
               child: Container(
