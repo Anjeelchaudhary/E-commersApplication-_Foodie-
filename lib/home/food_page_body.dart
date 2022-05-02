@@ -1,6 +1,7 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommers_app/utils/colors.dart';
+import 'package:flutter_ecommers_app/utils/dimensions.dart';
 import 'package:flutter_ecommers_app/widgets/big_text.dart';
 import 'package:flutter_ecommers_app/widgets/icon_and_text_widget.dart';
 import 'package:flutter_ecommers_app/widgets/small_text.dart';
@@ -17,7 +18,7 @@ class _FoodPageNodyState extends State<FoodPageBody> {
   var _currPageValue = 0.0;
 
   double _scaleFactor = 0.8;
-  double _height = 220;
+  double _height = Dimensions.pageViewContainer;
 
   @override
   void initState() {
@@ -109,7 +110,7 @@ class _FoodPageNodyState extends State<FoodPageBody> {
       child: Stack(
         children: [
           Container(
-            height: 220,
+            height: Dimensions.pageViewContainer,
             margin: const EdgeInsets.only(left: 10, right: 10),
             decoration: BoxDecoration(
               image: const DecorationImage(
@@ -124,7 +125,7 @@ class _FoodPageNodyState extends State<FoodPageBody> {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              height: 120,
+              height: Dimensions.pageViewTextContiner,
               margin: const EdgeInsets.only(left: 30, right: 30, bottom: 30),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
@@ -181,6 +182,7 @@ class _FoodPageNodyState extends State<FoodPageBody> {
                         height: 20,
                       ),
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           IconAndTextWidget(
                               icon: Icons.circle_sharp,
