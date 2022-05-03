@@ -1,3 +1,5 @@
+//import 'dart:html';
+
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommers_app/utils/colors.dart';
@@ -40,7 +42,7 @@ class _FoodPageNodyState extends State<FoodPageBody> {
     return Column(children: [
       Container(
         //color: Colors.redAccent,
-        height: 320,
+        height: Dimensions.pageView,
         child: PageView.builder(
             controller: pageController,
             itemCount: 5,
