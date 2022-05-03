@@ -39,29 +39,96 @@ class _FoodPageNodyState extends State<FoodPageBody> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
-      Container(
-        //color: Colors.redAccent,
-        height: Dimensions.pageView,
-        child: PageView.builder(
-            controller: pageController,
-            itemCount: 5,
-            itemBuilder: (context, position) {
-              return _buildPageItem(position);
-            }),
-      ),
-      DotsIndicator(
-        dotsCount: 5,
-        position: _currPageValue,
-        decorator: DotsDecorator(
-          activeColor: AppColors.mainColor,
-          size: const Size.square(9.0),
-          activeSize: const Size(18.0, 9.0),
-          activeShape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
+    return Column(
+      children: [
+        //slider section
+        Container(
+          //color: Colors.redAccent,
+          height: Dimensions.pageView,
+          child: PageView.builder(
+              controller: pageController,
+              itemCount: 5,
+              itemBuilder: (context, position) {
+                return _buildPageItem(position);
+              }),
         ),
-      )
-    ]);
+        //dots
+        DotsIndicator(
+          dotsCount: 5,
+          position: _currPageValue,
+          decorator: DotsDecorator(
+            activeColor: AppColors.mainColor,
+            size: const Size.square(9.0),
+            activeSize: const Size(18.0, 9.0),
+            activeShape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(5.0)),
+          ),
+        ),
+        //popular text
+        SizedBox(
+          height: Dimensions.height30,
+        ),
+        Container(
+          margin: EdgeInsets.only(left: Dimensions.width30),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              BigText(text: "Popular Items"),
+              SizedBox(
+                width: Dimensions.width10,
+              ),
+              Container(
+                margin: const EdgeInsets.only(bottom: 3),
+                child: BigText(
+                  text: ".",
+                  color: Colors.black26,
+                ),
+              ),
+              SizedBox(
+                width: Dimensions.width10,
+              ),
+              Container(
+                margin: const EdgeInsets.only(bottom: 2),
+                child: SmallText(text: "Food pairing"),
+              ),
+            ],
+          ),
+        ),
+        Container(
+          height: 900,
+          child: ListView.builder(
+            physics: NeverScrollableScrollPhysics(),
+            //shrinkWrap: true,
+            itemCount: 10,
+            itemBuilder: ((context, index) {
+              return Container(
+                margin: EdgeInsets.only(
+                    left: Dimensions.width20,
+                    right: Dimensions.width20,
+                    bottom: Dimensions.height10),
+                child: Row(
+                  children: [
+                    Container(
+                      width: 120,
+                      height: 120,
+                      decoration: BoxDecoration(
+                        borderRadius:
+                            BorderRadius.circular(Dimensions.radius20),
+                        color: Colors.white38,
+                        image: const DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage("assets/image/momoo.png"),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            }),
+          ),
+        )
+      ],
+    );
   }
 
   Widget _buildPageItem(int index) {
