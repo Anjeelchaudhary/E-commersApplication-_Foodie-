@@ -88,12 +88,13 @@ class _FoodPageNodyState extends State<FoodPageBody> {
                 width: Dimensions.width10,
               ),
               Container(
-                margin: const EdgeInsets.only(bottom: 2),
+                margin: EdgeInsets.only(bottom: 2),
                 child: SmallText(text: "Food pairing"),
               ),
             ],
           ),
         ),
+        //image section
         Container(
           height: 900,
           child: ListView.builder(
@@ -108,6 +109,7 @@ class _FoodPageNodyState extends State<FoodPageBody> {
                     bottom: Dimensions.height10),
                 child: Row(
                   children: [
+                    //Image section
                     Container(
                       width: 120,
                       height: 120,
@@ -121,6 +123,19 @@ class _FoodPageNodyState extends State<FoodPageBody> {
                         ),
                       ),
                     ),
+                    //Text container
+                    Expanded(
+                      child: Container(
+                        height: 100,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(Dimensions.radius20),
+                            bottomRight: Radius.circular(Dimensions.radius20),
+                          ),
+                          color: Colors.white,
+                        ),
+                      ),
+                    )
                   ],
                 ),
               );
