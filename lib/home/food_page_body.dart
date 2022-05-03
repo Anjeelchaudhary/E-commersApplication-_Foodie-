@@ -1,5 +1,3 @@
-//import 'dart:html';
-
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommers_app/utils/colors.dart';
@@ -133,6 +131,39 @@ class _FoodPageNodyState extends State<FoodPageBody> {
                             bottomRight: Radius.circular(Dimensions.radius20),
                           ),
                           color: Colors.white,
+                        ),
+                        child: Padding(
+                          padding: EdgeInsets.only(
+                              left: Dimensions.width10,
+                              right: Dimensions.width10),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              BigText(text: "Delicious item"),
+                              SizedBox(height: Dimensions.height10),
+                              SmallText(text: "Top ranking this week "),
+                              SizedBox(height: Dimensions.height10),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  IconAndTextWidget(
+                                      icon: Icons.circle_sharp,
+                                      text: "Normal",
+                                      iconColor: AppColors.iconColor1),
+                                  IconAndTextWidget(
+                                      icon: Icons.location_on,
+                                      text: "1.2 Km",
+                                      iconColor: AppColors.mainColor),
+                                  IconAndTextWidget(
+                                      icon: Icons.access_time_rounded,
+                                      text: "20min",
+                                      iconColor: AppColors.iconColor2)
+                                ],
+                              )
+                            ],
+                          ),
                         ),
                       ),
                     )
@@ -270,6 +301,7 @@ class _FoodPageNodyState extends State<FoodPageBody> {
                       SizedBox(
                         height: Dimensions.height20,
                       ),
+                      //this is for the design ie normal,distance and for time
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
