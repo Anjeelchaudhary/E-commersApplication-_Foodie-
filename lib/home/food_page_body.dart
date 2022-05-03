@@ -113,12 +113,13 @@ class _FoodPageNodyState extends State<FoodPageBody> {
         children: [
           Container(
             height: Dimensions.pageViewContainer,
-            margin: const EdgeInsets.only(left: 10, right: 10),
+            margin: EdgeInsets.only(
+                left: Dimensions.width10, right: Dimensions.width10),
             decoration: BoxDecoration(
               image: const DecorationImage(
                   fit: BoxFit.cover,
                   image: AssetImage("assets/image/chowmein.png")),
-              borderRadius: BorderRadius.circular(30),
+              borderRadius: BorderRadius.circular(Dimensions.radius30),
               color: index.isEven
                   ? const Color(0xFF69c5df)
                   : const Color(0xFF9294cc),
@@ -128,9 +129,12 @@ class _FoodPageNodyState extends State<FoodPageBody> {
             alignment: Alignment.bottomCenter,
             child: Container(
               height: Dimensions.pageViewTextContiner,
-              margin: const EdgeInsets.only(left: 30, right: 30, bottom: 30),
+              margin: EdgeInsets.only(
+                  left: Dimensions.width30,
+                  right: Dimensions.width30,
+                  bottom: Dimensions.height30),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
+                borderRadius: BorderRadius.circular(Dimensions.radius20),
 
                 //here the bottom of the box ie. shadow is created
                 //boxdesign
@@ -147,13 +151,14 @@ class _FoodPageNodyState extends State<FoodPageBody> {
                 color: Colors.white,
               ),
               child: Container(
-                padding: const EdgeInsets.only(top: 15, left: 15, right: 15),
+                padding: EdgeInsets.only(
+                    top: Dimensions.height15, left: 15, right: 15),
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       BigText(text: "Noodle"),
-                      const SizedBox(
-                        height: 10,
+                      SizedBox(
+                        height: Dimensions.height10,
                       ),
                       Row(
                         children: [
@@ -180,8 +185,8 @@ class _FoodPageNodyState extends State<FoodPageBody> {
                           SmallText(text: "Feedbacks"),
                         ],
                       ),
-                      const SizedBox(
-                        height: 20,
+                      SizedBox(
+                        height: Dimensions.height20,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
