@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ecommers_app/utils/dimensions.dart';
 import 'package:flutter_ecommers_app/widgets/big_text.dart';
 import 'package:flutter_ecommers_app/widgets/small_text.dart';
-import '../utils/colors.dart';
+import '../../utils/colors.dart';
 import '../home/food_page_body.dart';
 
 class MainFoodPage extends StatefulWidget {
@@ -43,7 +43,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
                         text: "Kathmandu",
                         color: Colors.black54,
                       ),
-                      const Icon(Icons.arrow_drop_down_rounded)
+                      Icon(Icons.arrow_drop_down_rounded)
                     ],
                   )
                 ],

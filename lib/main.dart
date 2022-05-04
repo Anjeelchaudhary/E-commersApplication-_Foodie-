@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ecommers_app/home/main_food_page.dart';
+//import 'package:flutter_ecommers_app/home/main_food_page.dart';
+import 'package:flutter_ecommers_app/pages/home/main_food_page.dart';
 import 'package:get/get.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MainFoodPage(),
+      home: MainFoodPage(),
     );
   }
 }

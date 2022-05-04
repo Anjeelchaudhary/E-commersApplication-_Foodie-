@@ -7,7 +7,7 @@ class IconAndTextWidget extends StatelessWidget {
   final String text;
   final Color iconColor;
 
-  const IconAndTextWidget(
+  IconAndTextWidget(
       {Key? key,
       required this.icon,
       required this.text,
@@ -23,7 +23,7 @@ class IconAndTextWidget extends StatelessWidget {
           color: iconColor,
           size: Dimensions.iconSize24,
         ),
-        const SizedBox(
+        SizedBox(
           width: 5,
         ),
         SmallText(

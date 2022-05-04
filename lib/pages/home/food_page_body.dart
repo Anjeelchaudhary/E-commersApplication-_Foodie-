@@ -56,8 +56,8 @@ class _FoodPageNodyState extends State<FoodPageBody> {
           position: _currPageValue,
           decorator: DotsDecorator(
             activeColor: AppColors.mainColor,
-            size: const Size.square(9.0),
-            activeSize: const Size(18.0, 9.0),
+            size: Size.square(9.0),
+            activeSize: Size(18.0, 9.0),
             activeShape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(5.0)),
           ),
@@ -76,7 +76,7 @@ class _FoodPageNodyState extends State<FoodPageBody> {
                 width: Dimensions.width10,
               ),
               Container(
-                margin: const EdgeInsets.only(bottom: 3),
+                margin: EdgeInsets.only(bottom: 3),
                 child: BigText(
                   text: ".",
                   color: Colors.black26,
@@ -113,7 +113,7 @@ class _FoodPageNodyState extends State<FoodPageBody> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(Dimensions.radius20),
                       color: Colors.white38,
-                      image: const DecorationImage(
+                      image: DecorationImage(
                         fit: BoxFit.cover,
                         image: AssetImage("assets/image/momoo.png"),
                       ),
@@ -225,7 +225,7 @@ class _FoodPageNodyState extends State<FoodPageBody> {
             margin: EdgeInsets.only(
                 left: Dimensions.width10, right: Dimensions.width10),
             decoration: BoxDecoration(
-              image: const DecorationImage(
+              image: DecorationImage(
                   fit: BoxFit.cover,
                   image: AssetImage("assets/image/chowmein.png")),
               borderRadius: BorderRadius.circular(Dimensions.radius30),
@@ -248,7 +248,7 @@ class _FoodPageNodyState extends State<FoodPageBody> {
                 //here the bottom of the box ie. shadow is created
                 //boxdesign
 
-                boxShadow: const [
+                boxShadow: [
                   BoxShadow(
                       color: Color(0xFFe8e8e8),
                       blurRadius: 5.0,
@@ -280,15 +280,15 @@ class _FoodPageNodyState extends State<FoodPageBody> {
                               );
                             }),
                           ),
-                          const SizedBox(
+                          SizedBox(
                             width: 10,
                           ),
                           SmallText(text: "4.5"),
-                          const SizedBox(
+                          SizedBox(
                             width: 10,
                           ),
                           SmallText(text: "986"),
-                          const SizedBox(
+                          SizedBox(
                             width: 10,
                           ),
                           SmallText(text: "Feedbacks"),
