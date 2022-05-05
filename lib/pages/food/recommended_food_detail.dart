@@ -5,6 +5,21 @@ class RecommendedFoodDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: CustomScrollView(
+        slivers: [
+          SliverAppBar(
+            flexibleSpace: FlexibleSpaceBar(
+              background: Image.asset(
+                "assets/image/ThakaliKhana.png",
+                width: double.maxFinite,
+
+                
+              ),
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
