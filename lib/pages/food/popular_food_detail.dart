@@ -4,6 +4,7 @@ import 'package:flutter_ecommers_app/utils/colors.dart';
 import 'package:flutter_ecommers_app/utils/dimensions.dart';
 import 'package:flutter_ecommers_app/widgets/app_column.dart';
 import 'package:flutter_ecommers_app/widgets/big_text.dart';
+import 'package:flutter_ecommers_app/widgets/expandable_text_widget.dart';
 //import 'package:flutter_ecommers_app/widgets/big_text.dart';
 //import 'package:flutter_ecommers_app/widgets/icon_and_text_widget.dart';
 //import 'package:flutter_ecommers_app/widgets/small_text.dart';
@@ -69,12 +70,20 @@ class PopularFoodDetail extends StatelessWidget {
                     SizedBox(
                       height: Dimensions.height20,
                     ),
-                    BigText(text: "Detail")
+                    BigText(text: "Details"),
+                    SizedBox(
+                      height: Dimensions.height20,
+                    ),
+                    Expanded(
+                      child: SingleChildScrollView(
+                        child: ExpandableTextWidget(
+                            text:
+                                "A Chinese stir-fried noodle dish which is now a popular streetside food dish across the globe, specifically in Asia. Being a popular dish across countries, Chow mein is made in different ways with many different variations in different places, this one here is the quickest and easiest chowmein recipe, made under 30 minutes. Serve as a brunch or breakfast that kids would just love. You can also serve this as an evening snack or a side for an oriental dinner."),
+                      ),
+                    )
                   ],
                 )),
           )
-          //Expandable widgets
-          
         ],
       ),
       bottomNavigationBar: Container(
@@ -130,7 +139,7 @@ class PopularFoodDetail extends StatelessWidget {
                   left: Dimensions.width20,
                   right: Dimensions.width20),
               child: BigText(
-                text: "\$10 | Add to cart ",
+                text: "150.0 Rs | Add to cart ",
                 color: Colors.white,
               ),
               decoration: BoxDecoration(
