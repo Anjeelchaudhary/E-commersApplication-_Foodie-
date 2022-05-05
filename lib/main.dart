@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommers_app/pages/food/popular_food_detail.dart';
 //import 'package:flutter_ecommers_app/home/main_food_page.dart';
-import 'package:flutter_ecommers_app/pages/home/main_food_page.dart';
+//import 'package:flutter_ecommers_app/pages/home/main_food_page.dart';
 import 'package:get/get.dart';
 
 void main() {
