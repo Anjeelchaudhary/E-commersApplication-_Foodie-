@@ -19,6 +19,7 @@ class PopularFoodDetail extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Stack(
         children: [
+          //Background images
           Positioned(
             left: 0,
             right: 0,
@@ -31,6 +32,7 @@ class PopularFoodDetail extends StatelessWidget {
                       image: AssetImage("assets/image/chowmein.png"))),
             ),
           ),
+          //icon widgets
           Positioned(
             top: Dimensions.height45,
             left: Dimensions.width20,
@@ -43,6 +45,7 @@ class PopularFoodDetail extends StatelessWidget {
               ],
             ),
           ),
+          //inctroduction of food
           Positioned(
             left: 0,
             right: 0,
@@ -70,6 +73,8 @@ class PopularFoodDetail extends StatelessWidget {
                   ],
                 )),
           )
+          //Expandable widgets
+          
         ],
       ),
       bottomNavigationBar: Container(
