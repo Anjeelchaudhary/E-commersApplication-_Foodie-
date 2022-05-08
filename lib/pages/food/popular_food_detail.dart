@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommers_app/utils/colors.dart';
-//import 'package:flutter_ecommers_app/utils/colors.dart';
 import 'package:flutter_ecommers_app/utils/dimensions.dart';
 import 'package:flutter_ecommers_app/widgets/app_column.dart';
 import 'package:flutter_ecommers_app/widgets/big_text.dart';
 import 'package:flutter_ecommers_app/widgets/expandable_text_widget.dart';
-//import 'package:flutter_ecommers_app/widgets/big_text.dart';
-//import 'package:flutter_ecommers_app/widgets/icon_and_text_widget.dart';
-//import 'package:flutter_ecommers_app/widgets/small_text.dart';
+import 'package:flutter_ecommers_app/widgets/icon_and_text_widget.dart';
+import 'package:flutter_ecommers_app/widgets/small_text.dart';
 
 import '../../widgets/app_icon.dart';
 
