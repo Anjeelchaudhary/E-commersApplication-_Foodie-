@@ -11,10 +11,10 @@ class FoodPageBody extends StatefulWidget {
   const FoodPageBody({Key? key}) : super(key: key);
 
   @override
-  State<FoodPageBody> createState() => _FoodPageNodyState();
+  State<FoodPageBody> createState() => _FoodPageBodyState();
 }
 
-class _FoodPageNodyState extends State<FoodPageBody> {
+class _FoodPageBodyState extends State<FoodPageBody> {
   PageController pageController = PageController(viewportFraction: 0.85);
   var _currPageValue = 0.0;
 
